@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-h5 text-center">MEMBERS</h1>
+  <p class="text-h5 text-center">MEMBERS</p>
   <v-container>
     <v-row>
       <v-col cols="12" md="4">

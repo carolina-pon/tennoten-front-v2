@@ -1,7 +1,7 @@
 <template>
-  <h1 class="text-h5 text-center">
+  <p class="text-h5 text-center">
     INNTERVIEW BLOG 2023<v-icon icon="mdi-fountain-pen"></v-icon> IN KYOTO
-  </h1>
+  </p>
   <v-container>
     <v-row>
       <v-col cols="12" md="4">
