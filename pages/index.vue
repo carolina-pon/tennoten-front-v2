@@ -6,9 +6,9 @@
       transition="slide-y-transition"
     >
       <template v-slot:activator="{ props }">
-        <v-btn
+        <v-btn icon
           v-bind="props"
-        ><v-icon>mdi-menu</v-icon>
+        ><v-icon>mdi-dots-horizontal</v-icon>
         </v-btn>
       </template>
       <v-list>
