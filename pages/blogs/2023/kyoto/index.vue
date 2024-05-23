@@ -1,50 +1,46 @@
 <template>
-  <h1 class="text-h5 text-center">INTERVIEW BLOG 2023-KYOTO</h1>
-
+  <h1 class="text-h5 text-center">
+    INNTERVIEW BLOG 2023<v-icon icon="mdi-fountain-pen"></v-icon> IN KYOTO
+  </h1>
   <v-container>
-    <v-row dense justify="center">
-      <v-col cols="4">
-        <v-card variant="outlined">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <v-avatar
-              class="ma-3"
-              size="125"
-              rounded="5"
-              color="surface-variant"
-            >
-            </v-avatar>
-            <v-card-title
-              class="text-h5"
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-              >永田　里奈</v-card-title
-            >
-          </div>
+    <v-row>
+      <v-col cols="12" md="4">
+        <v-card>
+          <v-card-item>
+            <div class="d-flex justify-center">
+              <v-avatar size="250">
+                <v-img src="https://cdn.vuetifyjs.com/images/john.jpg"></v-img>
+              </v-avatar>
+            </div>
+            <v-divider :thickness="9" color="white"></v-divider>
+            <p class="text-h5 d-flex justify-center">永田　里奈</p>
+          </v-card-item>
         </v-card>
       </v-col>
-      <v-col cols="4">
-        <v-card variant="outlined">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <v-avatar
-              class="ma-3"
-              size="125"
-              rounded="5"
-              color="surface-variant"
-            >
-            </v-avatar>
-            <v-card-title
-              class="text-h5"
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-              >永田　里奈</v-card-title
-            >
-          </div>
+      <v-col cols="12" md="4">
+        <v-card>
+          <v-card-item>
+            <div class="d-flex justify-center">
+              <v-avatar size="250">
+                <v-img src="https://cdn.vuetifyjs.com/images/john.jpg"></v-img>
+              </v-avatar>
+            </div>
+            <v-divider :thickness="9" color="white"></v-divider>
+            <p class="text-h5 d-flex justify-center">永田　里奈</p>
+          </v-card-item>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="4">
+        <v-card>
+          <v-card-item>
+            <div class="d-flex justify-center">
+              <v-avatar size="250">
+                <v-img src="https://cdn.vuetifyjs.com/images/john.jpg"></v-img>
+              </v-avatar>
+            </div>
+            <v-divider :thickness="9" color="white"></v-divider>
+            <p class="text-h5 d-flex justify-center">永田　里奈</p>
+          </v-card-item>
         </v-card>
       </v-col>
     </v-row>
