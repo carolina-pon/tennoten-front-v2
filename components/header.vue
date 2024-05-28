@@ -1,3 +1,12 @@
+<script setup>
+const items = [
+  { title: "ABOUT", link: "/about" },
+  { title: "MEMBERS", link: "/members" },
+  { title: "INTERVIEW BLOG", link: "/blogs/2023/kyoto" },
+  { title: "ARCHIVES", link: "/archives/2021" },
+];
+</script>
+
 <template>
   <v-container>
     <v-layout class="rounded rounded-md">
@@ -35,12 +44,3 @@
     </v-layout>
   </v-container>
 </template>
-
-<script setup>
-const items = [
-  { title: "ABOUT", link: "/about" },
-  { title: "MEMBERS", link: "/members" },
-  { title: "INTERVIEW BLOG", link: "/blogs/2023/kyoto" },
-  { title: "ARCHIVES", link: "/archives/2021" },
-];
-</script>
