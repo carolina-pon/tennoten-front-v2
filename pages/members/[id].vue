@@ -39,5 +39,10 @@ const { data: author } = await useFetch(
         <v-divider color="black"></v-divider>
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <v-col cols="10">
+        <v-btn icon to="/members" nuxt><v-icon>mdi-arrow-left</v-icon></v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
