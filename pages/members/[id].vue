@@ -1,3 +1,10 @@
+<script setup>
+const route = useRoute();
+const { data: author } = await useFetch(
+  `http://localhost:3000/api/authors/${route.params.id}`
+);
+</script>
+
 <template>
   <v-container>
     <v-row justify="center">
@@ -17,11 +24,13 @@
     <v-row justify="center">
       <v-col cols="12" md="4">
         <p class="text-h5 d-flex justify-center">
-          <span>名前：</span>永田　里奈
+          <span>名前：{{ author.name }}</span>
         </p>
-        <p class="text-h5 d-flex justify-center"><span>活動拠点：</span>東京</p>
         <p class="text-h5 d-flex justify-center">
-          <span>SNS：</span>Instagram: aaa
+          <span>活動拠点：{{ author.site }}</span>
+        </p>
+        <p class="text-h5 d-flex justify-center">
+          <span>SNS：{{ author.sns }}</span>
         </p>
       </v-col>
     </v-row>
