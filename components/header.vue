@@ -9,7 +9,6 @@ const items = [
 
 <template>
   <v-container>
-    <v-layout class="rounded rounded-md">
       <v-app-bar flat>
         <v-menu transition="slide-y-transition">
           <template v-slot:activator="{ props }">
@@ -41,6 +40,5 @@ const items = [
           <v-icon>mdi-instagram</v-icon>
         </v-btn>
       </v-app-bar>
-    </v-layout>
   </v-container>
 </template>

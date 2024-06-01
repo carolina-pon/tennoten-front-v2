@@ -1,4 +1,9 @@
 <template>
-  <!-- なんでかv-footerを使うと真っ白になっちゃう。pタグで一旦対応 -->
-  <p class="text-center">©︎2024 <strong>点の展</strong></p>
+  <v-footer>
+    <v-row>
+      <v-col class="text-center mt-4" cols="12">
+        {{ new Date().getFullYear() }} <strong>点の展</strong>
+      </v-col>
+    </v-row>
+  </v-footer>
 </template>
