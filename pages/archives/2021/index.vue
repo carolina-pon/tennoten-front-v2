@@ -1,6 +1,7 @@
+<script setup></script>
 <template>
   <p class="text-h5 text-center">
-    点の展 2021 AT ONELINE <v-icon icon="mdi-web"></v-icon> 
+    点の展 2021 AT ONELINE
   </p>
   <v-container>
   <v-row>
