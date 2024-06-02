@@ -1,5 +1,6 @@
 <script setup>
 const items = [
+  { title: "HOME", link: "/" },
   { title: "ABOUT", link: "/about" },
   { title: "MEMBERS", link: "/members" },
   { title: "INTERVIEW BLOG", link: "/blogs/2023/kyoto" },
