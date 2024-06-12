@@ -1,12 +1,9 @@
 <script setup>
 import { ref } from "vue";
+definePageMeta({ layout: "admin" });
 
 const links = ref(["Dashboard", "Messages", "Profile", "Updates"]);
 const { data: authors } = await useFetch("http://localhost:3000/api/authors");
-// const { data: editAuthors } = await useFetch("http://localhost:3000/api/authors",{
-//   method: "PATCH",
-//   body: JSON.stringify({ name: authorName })
-// });
 const { data: blogs } = await useFetch("http://localhost:3000/api/blogs");
 const { data: works } = await useFetch("http://localhost:3000/api/works");
 const showAuthorsList = ref(false);
@@ -71,76 +68,76 @@ const workTableItems = works.value.map((work) => ({
 </script>
 
 <template>
-  <v-main class="bg-grey-lighten-3">
-    <v-container>
-      <v-row>
-        <v-col cols="2">
-          <v-sheet rounded="lg">
-            <v-list rounded="lg">
-              <v-list-item link title="サイト管理者" disabled></v-list-item>
-              <v-list-item
-                link
-                title="作品制作者"
-                @click="showAuthors"
-              ></v-list-item>
-              <v-list-item
-                link
-                title="制作ブログ"
-                @click="showBlogs"
-              ></v-list-item>
-              <v-list-item
-                link
-                title="作品アーカイブ"
-                @click="showWorks"
-              ></v-list-item>
-              <v-list-item link title="作品カテゴリー" disabled></v-list-item>
-            </v-list>
-          </v-sheet>
-        </v-col>
+  <div class="bg-grey-lighten-3 pt-10 pb-10">
+  <v-container class="pb-10">
+    <v-row>
+      <v-col cols="2">
+        <v-sheet rounded="lg">
+          <v-list rounded="lg">
+            <v-list-item link title="サイト管理者" disabled></v-list-item>
+            <v-list-item
+              link
+              title="作品制作者"
+              @click="showAuthors"
+            ></v-list-item>
+            <v-list-item
+              link
+              title="制作ブログ"
+              @click="showBlogs"
+            ></v-list-item>
+            <v-list-item
+              link
+              title="作品アーカイブ"
+              @click="showWorks"
+            ></v-list-item>
+            <v-list-item link title="作品カテゴリー" disabled></v-list-item>
+          </v-list>
+        </v-sheet>
+      </v-col>
 
-        <v-col>
-          <v-sheet min-height="70vh" rounded="lg">
-            <v-list rounded="lg">
-              <!-- 作品制作者一覧 -->
-              <v-list lines="one" v-if="showAuthorsList">
-                <v-list-item class="text-h5"
-                  >作品制作者一覧
-                  <v-btn
-                    flat
-                    class="ma-2"
-                    color="teal-lighten-2"
-                    @click="editAuthors(author)"
-                  >
-                    投稿
-                  </v-btn></v-list-item
+      <v-col>
+        <v-sheet min-height="70vh" rounded="lg">
+          <v-list rounded="lg">
+            <!-- 作品制作者一覧 -->
+            <v-list lines="one" v-if="showAuthorsList">
+              <v-list-item class="text-h5"
+                >作品制作者一覧
+                <v-btn
+                  flat
+                  class="ma-2"
+                  color="teal-lighten-2"
+                  @click="dialog = true"
                 >
-                <v-divider></v-divider>
-                <v-data-table
-                  :headers="authorTableHeaders"
-                  :items="authorTableItems"
-                >
-                  <template v-slot:item="{ item }">
-                    <tr>
-                      <td>{{ item.name }}</td>
-                      <td>{{ item.site }}</td>
-                      <td>{{ item.sns }}</td>
-                      <td>
-                        <v-btn
-                          flat
-                          class="ma-2"
-                          color="teal-lighten-2"
-                          @click="editAuthors(author)"
-                        >
-                          編集
-                        </v-btn>
-                        <v-btn flat class="ma-2" color="deep-orange-accent-2">
-                          削除
-                        </v-btn>
-                      </td>
-                    </tr>
-                  </template>
-                </v-data-table>
-              </v-list>
+                  投稿
+                </v-btn>
+              </v-list-item>
+              <v-divider></v-divider>
+              <v-data-table
+                :headers="authorTableHeaders"
+                :items="authorTableItems"
+              >
+                <template v-slot:item="{ item }">
+                  <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.site }}</td>
+                    <td>{{ item.sns }}</td>
+                    <td>
+                      <v-btn
+                        flat
+                        class="ma-2"
+                        color="teal-lighten-2"
+                        @click="editAuthors(author)"
+                      >
+                        編集
+                      </v-btn>
+                      <v-btn flat class="ma-2" color="deep-orange-accent-2">
+                        削除
+                      </v-btn>
+                    </td>
+                  </tr>
+                </template>
+              </v-data-table>
+            </v-list>
 
             <!-- 制作ブログ一覧 -->
             <v-list lines="one" v-if="showBlogsList">
@@ -203,9 +200,9 @@ const workTableItems = works.value.map((work) => ({
               </v-data-table>
             </v-list>
           </v-list>
-          </v-sheet>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-main>
+        </v-sheet>
+      </v-col>
+    </v-row>
+  </v-container>
+</div>
 </template>
